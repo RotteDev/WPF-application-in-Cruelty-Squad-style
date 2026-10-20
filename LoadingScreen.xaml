@@ -1,0 +1,40 @@
+﻿<Window x:Class="A_corporate_bureaucratic_application_for_optimizing_managers_and_their_professional_activities.LoadingScreen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Loading"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        AllowsTransparency="True"
+        Background="White"
+        WindowStartupLocation="CenterScreen"
+        Cursor="None"
+        Width="1280" Height="720">
+
+    <Grid>
+        <Image Source="/Assets/Consumer Softproducts logo.jpg"
+               Stretch="Uniform"
+               HorizontalAlignment="Center"
+               VerticalAlignment="Top"
+               MaxWidth="600" MaxHeight="600"
+               Margin="0,10,0,0"/>
+
+        <TextBlock x:Name="StatusText"
+                   Text="INITIALIZING..."
+                   FontFamily="Arial Narrow"
+                   FontSize="40"
+                   Foreground="#01D800"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Bottom"
+                   Margin="0,0,0,40"
+                   TextAlignment="Center">
+            <TextBlock.LayoutTransform>
+                <ScaleTransform ScaleX="1" ScaleY="2.5"/>
+            </TextBlock.LayoutTransform>
+            <TextBlock.Effect>
+                <DropShadowEffect Color="#FE0000"
+                                  ShadowDepth="2"
+                                  BlurRadius="1"/>
+            </TextBlock.Effect>
+        </TextBlock>
+    </Grid>
+</Window>

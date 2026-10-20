@@ -1,0 +1,70 @@
+﻿<Window x:Class="A_corporate_bureaucratic_application_for_optimizing_managers_and_their_professional_activities.Views.CrueltyMessageBox"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ERROR"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        AllowsTransparency="False"
+        Background="Black"
+        WindowStartupLocation="CenterScreen"
+        Cursor="None"
+        Width="500" Height="250">
+
+    <Grid>
+        <Border Background="Black"
+                BorderBrush="Red"
+                BorderThickness="2">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="60"/>
+                </Grid.RowDefinitions>
+
+                <Border Grid.Row="0" Background="Red">
+                    <TextBlock Text="FATAL ERROR"
+                               FontFamily="{StaticResource MingLiUFont}"
+                               FontSize="20"
+                               FontWeight="Bold"
+                               Foreground="Black"
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center"/>
+                </Border>
+
+                <TextBlock x:Name="MessageText"
+                           Grid.Row="1"
+                           FontFamily="{StaticResource MingLiUFont}"
+                           FontSize="16"
+                           Foreground="#01D800"
+                           TextWrapping="Wrap"
+                           TextAlignment="Center"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"
+                           Margin="20"/>
+
+                <Button x:Name="OkButton"
+                        Grid.Row="2"
+                        Content="[ OK ]"
+                        FontFamily="{StaticResource MingLiUFont}"
+                        FontSize="16"
+                        Foreground="Red"
+                        Background="Black"
+                        BorderBrush="Red"
+                        BorderThickness="1"
+                        Width="120" Height="35"
+                        Cursor="None"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Click="OkButton_Click"/>
+            </Grid>
+        </Border>
+
+        <Image x:Name="CustomCursor"
+               Source="/Assets/Cursor1.png"
+               Width="32" Height="32"
+               HorizontalAlignment="Left"
+               VerticalAlignment="Top"
+               IsHitTestVisible="False"
+               Panel.ZIndex="99999"/>
+    </Grid>
+</Window>

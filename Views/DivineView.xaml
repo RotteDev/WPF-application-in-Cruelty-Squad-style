@@ -1,0 +1,102 @@
+﻿<UserControl x:Class="A_corporate_bureaucratic_application_for_optimizing_managers_and_their_professional_activities.Views.DivineView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid Background="White">
+        <TextBlock x:Name="TitleText"
+                   Text="CERTIFICATION FOR THE DIVINE LIGHT INDEX"
+                   FontFamily="{StaticResource MingLiUFont}"
+                   FontSize="25"
+                   Foreground="Black"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Top"
+                   Margin="10,0,0,0"/>
+
+        <Rectangle Height="1"
+                   Fill="Black"
+                   HorizontalAlignment="Stretch"
+                   VerticalAlignment="Top"
+                   Margin="0,33,0,0"/>
+
+        <Grid x:Name="IntroPanel">
+            <TextBlock x:Name="IntroText"
+                       FontFamily="{StaticResource MingLiUFont}"
+                       FontSize="25"
+                       Foreground="Black"
+                       TextWrapping="Wrap"
+                       TextAlignment="Center"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       Width="500"
+                       Text="THIS TEST SHOWS YOUR WILLINGNESS AND ENTHUSIASM FOR THE RIGHT TO ASCEND TO DIVINE LIGHT. FAILURE OF THE TEST ENTAILS THE DEGRADATION OF YOUR FLESH."/>
+
+
+            <Button x:Name="StartButton"
+                    Style="{StaticResource ImageButtonStyle}"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Bottom"
+                    Margin="0,0,0,100"
+                    Click="StartButton_Click">
+                <Image Source="/Assets/DivineTestStartIcon.png" Width="80" Height="80" Stretch="Fill"/>
+            </Button>
+        </Grid>
+
+        <Grid x:Name="TestPanel" Visibility="Collapsed">
+            <Grid HorizontalAlignment="Stretch"
+                  VerticalAlignment="Top"
+                  Margin="20,40,20,0"
+                  Height="4">
+                <Rectangle x:Name="TimerBar"
+                           Fill="Red"
+                           HorizontalAlignment="Center"
+                           Width="560"/>
+            </Grid>
+
+            <TextBlock x:Name="QuestionText"
+                       FontFamily="{StaticResource MingLiUFont}"
+                       FontSize="20"
+                       Foreground="Black"
+                       TextWrapping="Wrap"
+                       TextAlignment="Left"
+                       HorizontalAlignment="Stretch"
+                       VerticalAlignment="Top"
+                       Margin="10,50,20,0"/>
+
+            <ScrollViewer x:Name="AnswersScroll"
+                          VerticalScrollBarVisibility="Auto"
+                          HorizontalScrollBarVisibility="Disabled"
+                          HorizontalAlignment="Stretch"
+                          VerticalAlignment="Stretch"
+                          Margin="10,150,30,0">
+                <ScrollViewer.Resources>
+                    <Style TargetType="ScrollBar" BasedOn="{StaticResource CrueltyScrollBar}"/>
+                </ScrollViewer.Resources>
+                <StackPanel x:Name="AnswersPanel"/>
+            </ScrollViewer>
+
+            <Button x:Name="NextButton"
+                    Style="{StaticResource ImageButtonStyle}"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Bottom"
+                    Margin="0,0,0,20"
+                    IsEnabled="False"
+                    Click="NextButton_Click">
+                <Button.LayoutTransform>
+                    <ScaleTransform ScaleX="-1" ScaleY="1"/>
+                </Button.LayoutTransform>
+                <Image Source="/Assets/ButtonTestIcon.png" Width="5" Height="5" Stretch="Fill"/>
+            </Button>
+        </Grid>
+        
+        <Grid x:Name="ResultPanel" Visibility="Collapsed">
+            <TextBlock x:Name="ResultText"
+                       FontFamily="{StaticResource MingLiUFont}"
+                       FontSize="26"
+                       Foreground="Black"
+                       TextWrapping="Wrap"
+                       TextAlignment="Center"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center"
+                       Width="500"/>
+        </Grid>
+    </Grid>
+</UserControl>

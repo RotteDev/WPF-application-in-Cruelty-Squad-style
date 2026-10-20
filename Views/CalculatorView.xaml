@@ -1,0 +1,195 @@
+﻿<UserControl x:Class="A_corporate_bureaucratic_application_for_optimizing_managers_and_their_professional_activities.Views.CalculatorView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <UserControl.Resources>
+        <Style x:Key="CalcButtonStyle" TargetType="Button">
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="FontFamily" Value="{StaticResource MingLiUFont}"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="BorderBrush" Value="Black"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Margin" Value="2"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="bg"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}">
+                            <Border.Background>
+                                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                                    <GradientStop Color="#00FF00" Offset="0"/>
+                                    <GradientStop Color="#FFAA00" Offset="0.5"/>
+                                    <GradientStop Color="#FF0000" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Border.Background>
+                            <ContentPresenter HorizontalAlignment="Center"
+                                              VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="bg" Property="Opacity" Value="0.7"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="bg" Property="Opacity" Value="0.5"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+
+    <Grid>
+        <Image Source="/Assets/CalculatorBG.png"
+           Stretch="Fill"
+           HorizontalAlignment="Stretch"
+           VerticalAlignment="Stretch"
+           IsHitTestVisible="False"/>
+
+        <TextBlock x:Name="TitleText"
+           Text="DEBT AND DEPRAVITY CALCULATOR"
+           FontFamily="{StaticResource MingLiUFont}"
+           FontSize="25"
+           Foreground="Red"
+           HorizontalAlignment="Left"
+           VerticalAlignment="Top"
+           Margin="10,0,0,0"/>
+
+        <Rectangle Height="1"
+                   Fill="Red"
+                   HorizontalAlignment="Stretch"
+                   VerticalAlignment="Top"
+                   Margin="0,33,0,0"/>
+
+        <Border HorizontalAlignment="Center"
+                VerticalAlignment="Top"
+                Margin="0,42,0,0"
+                Width="400" Height="40"
+                BorderBrush="Red"
+                BorderThickness="2"
+                Background="Black">
+            <TextBlock x:Name="DisplayText"
+                       Text="0"
+                       FontFamily="{StaticResource MingLiUFont}"
+                       FontSize="22"
+                       Foreground="#01D800"
+                       HorizontalAlignment="Right"
+                       VerticalAlignment="Center"
+                       Margin="0,0,8,0"/>
+        </Border>
+
+        <UniformGrid x:Name="CalcGrid"
+                     Rows="5"
+                     Columns="4"
+                     HorizontalAlignment="Center"
+                     VerticalAlignment="Top"
+                     Margin="0,80,0,0"
+                     Width="400" Height="180"/>
+
+        <StackPanel HorizontalAlignment="Center"
+                    VerticalAlignment="Top"
+                    Margin="0,268,0,0"
+                    Width="440">
+            <TextBlock Text="─── LIFE PROFITABILITY ───"
+                       FontFamily="{StaticResource MingLiUFont}"
+                       FontSize="20"
+                       Foreground="Red"
+                       HorizontalAlignment="Center"
+                       Margin="0,0,0,4"/>
+
+            <Grid Margin="0,2,0,2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="130"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0" Text="AGE:"
+                           FontFamily="{StaticResource MingLiUFont}"
+                           FontSize="20"
+                           Foreground="Black"
+                           VerticalAlignment="Center"/>
+                <TextBox x:Name="AgeInput" Grid.Column="1"
+                         FontFamily="{StaticResource MingLiUFont}"
+                         FontSize="20"
+                         Background="Black"
+                         Foreground="#01D800"
+                         BorderBrush="Red"
+                         BorderThickness="1"
+                         Padding="3"/>
+            </Grid>
+
+            <Grid Margin="0,2,0,2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="130"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0" Text="SALARY/YEAR:"
+                           FontFamily="{StaticResource MingLiUFont}"
+                           FontSize="20"
+                           Foreground="Black"
+                           VerticalAlignment="Center"/>
+                <TextBox x:Name="SalaryInput" Grid.Column="1"
+                         FontFamily="{StaticResource MingLiUFont}"
+                         FontSize="20"
+                         Background="Black"
+                         Foreground="#01D800"
+                         BorderBrush="Red"
+                         BorderThickness="1"
+                         Padding="3"/>
+            </Grid>
+
+            <Grid Margin="0,2,0,2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="130"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0" Text="CALORIES/DAY:"
+                           FontFamily="{StaticResource MingLiUFont}"
+                           FontSize="20"
+                           Foreground="Black"
+                           VerticalAlignment="Center"/>
+                <TextBox x:Name="CaloriesInput" Grid.Column="1"
+                         FontFamily="{StaticResource MingLiUFont}"
+                         FontSize="20"
+                         Background="Black"
+                         Foreground="#01D800"
+                         BorderBrush="Red"
+                         BorderThickness="1"
+                         Padding="3"/>
+            </Grid>
+
+            <Button x:Name="CalculateButton"
+                    Content="[ CALCULATE PROFITABILITY ]"
+                    FontFamily="{StaticResource MingLiUFont}"
+                    FontSize="20"
+                    FontWeight="Bold"
+                    Foreground="Black"
+                    BorderBrush="Black"
+                    BorderThickness="1"
+                    Padding="4,3"
+                    Margin="0,6,0,0"
+                    Cursor="Hand"
+                    Click="CalculateButton_Click">
+                <Button.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                        <GradientStop Color="#00FF00" Offset="0"/>
+                        <GradientStop Color="#FFAA00" Offset="0.5"/>
+                        <GradientStop Color="#FF0000" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+
+            <TextBlock x:Name="ResultText"
+                       Text="RESULT: --"
+                       FontFamily="{StaticResource MingLiUFont}"
+                       FontSize="20"
+                       Foreground="Red"
+                       TextWrapping="Wrap"
+                       TextAlignment="Center"
+                       HorizontalAlignment="Center"
+                       Width="420"
+                       Margin="0,6,0,0"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

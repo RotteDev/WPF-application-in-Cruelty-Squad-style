@@ -1,0 +1,199 @@
+﻿<UserControl x:Class="A_corporate_bureaucratic_application_for_optimizing_managers_and_their_professional_activities.Views.CEOView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <UserControl.Resources>
+        <Style x:Key="ChannelButtonStyle" TargetType="Button">
+            <Setter Property="FontFamily" Value="{StaticResource MingLiUFont}"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Foreground" Value="#01D800"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="Padding" Value="15,6"/>
+            <Setter Property="Cursor" Value="None"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="bg" Background="Transparent" BorderThickness="0,0,0,1" BorderBrush="#3300FF00">
+                            <ContentPresenter HorizontalAlignment="Left" VerticalAlignment="Center" Margin="{TemplateBinding Padding}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="bg" Property="Background" Value="#4000FF00"/>
+                                <Setter TargetName="bg" Property="BorderBrush" Value="Red"/>
+                                <Setter Property="Foreground" Value="White"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="VoiceChannelButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+            <Setter Property="Cursor" Value="None"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="bg" Background="Transparent" BorderThickness="0,0,0,1" BorderBrush="#22FFFFFF">
+                            <ContentPresenter/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="bg" Property="Background" Value="#2000FF00"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+
+    <Grid Background="Black">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="240"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Border Grid.Column="0" Background="#050505" BorderBrush="Red" BorderThickness="0,0,2,0">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Border Grid.Row="0" Background="Red" BorderBrush="Black" BorderThickness="0,0,0,2">
+                    <TextBlock Text="CONSUMER SOFTPRODUCTS" FontFamily="{StaticResource MingLiUFont}" FontSize="14" FontWeight="Bold" Foreground="Black" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </Border>
+
+                <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+                    <ScrollViewer.Resources>
+                        <Style TargetType="ScrollBar" BasedOn="{StaticResource CrueltyScrollBar}"/>
+                    </ScrollViewer.Resources>
+
+                    <StackPanel Margin="0,15,0,0">
+                        <TextBlock Text="TEXT CHANNELS" FontFamily="{StaticResource GameFont}" FontSize="12" Foreground="Red" Margin="15,0,0,5"/>
+
+                        <Button x:Name="ChannelGeneral" Tag="general" Style="{StaticResource ChannelButtonStyle}" Content="# general"/>
+
+                        <Border Padding="15,6" Background="Transparent" BorderThickness="0,0,0,1" BorderBrush="#22FFFFFF">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="[LOCKED] " FontFamily="{StaticResource GameFont}" FontSize="12" Foreground="Red" VerticalAlignment="Center"/>
+                                <TextBlock Text="# k/d" FontFamily="{StaticResource MingLiUFont}" FontSize="14" FontWeight="Bold" Foreground="#555555"/>
+                            </StackPanel>
+                        </Border>
+
+                        <Border Padding="15,6" Background="Transparent" BorderThickness="0,0,0,1" BorderBrush="#22FFFFFF">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="[LOCKED] " FontFamily="{StaticResource GameFont}" FontSize="12" Foreground="Red" VerticalAlignment="Center"/>
+                                <TextBlock Text="# how 2 work" FontFamily="{StaticResource MingLiUFont}" FontSize="14" FontWeight="Bold" Foreground="#555555"/>
+                            </StackPanel>
+                        </Border>
+
+                        <Border Padding="15,6" Background="Transparent" BorderThickness="0,0,0,1" BorderBrush="#22FFFFFF">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="[LOCKED] " FontFamily="{StaticResource GameFont}" FontSize="12" Foreground="Red" VerticalAlignment="Center"/>
+                                <TextBlock Text="# NSFW" FontFamily="{StaticResource MingLiUFont}" FontSize="14" FontWeight="Bold" Foreground="#555555"/>
+                            </StackPanel>
+                        </Border>
+
+                        <Border Padding="15,6" Background="Transparent" BorderThickness="0,0,0,1" BorderBrush="#22FFFFFF">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="[LOCKED] " FontFamily="{StaticResource GameFont}" FontSize="12" Foreground="Red" VerticalAlignment="Center"/>
+                                <TextBlock Text="# lol ranked sb?" FontFamily="{StaticResource MingLiUFont}" FontSize="14" FontWeight="Bold" Foreground="#555555"/>
+                            </StackPanel>
+                        </Border>
+
+                        <TextBlock Text="VOICE CHANNELS" FontFamily="{StaticResource GameFont}" FontSize="12" Foreground="Red" Margin="15,15,0,5"/>
+                        
+                        <Button x:Name="PrivateRoomButton" Tag="private" Style="{StaticResource VoiceChannelButtonStyle}" Click="ChannelPrivate_Click">
+                            <Border Padding="10,5" Background="Transparent">
+                                <StackPanel>
+                                    <TextBlock Text="n00b room" FontFamily="{StaticResource MingLiUFont}" FontSize="14" FontWeight="Bold" Foreground="White"/>
+                                    <StackPanel x:Name="PrivateRoomAvatars" Orientation="Horizontal" Margin="10,5,0,0"/>
+                                </StackPanel>
+                            </Border>
+                        </Button>
+
+                        <Border Padding="10,5" Background="Transparent" BorderThickness="0,0,0,1" BorderBrush="#22FFFFFF">
+                            <StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="[LOCKED] " FontFamily="{StaticResource GameFont}" FontSize="12" Foreground="Red" VerticalAlignment="Center"/>
+                                    <TextBlock Text="CEO's Office" FontFamily="{StaticResource MingLiUFont}" FontSize="14" FontWeight="Bold" Foreground="#555555"/>
+                                </StackPanel>
+                                <StackPanel x:Name="VoiceCEOAvatars" Orientation="Horizontal" Margin="10,5,0,0"/>
+                            </StackPanel>
+                        </Border>
+
+                        <Border Padding="10,5" Background="Transparent" BorderThickness="0,0,0,1" BorderBrush="#22FFFFFF">
+                            <StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="[LOCKED] " FontFamily="{StaticResource GameFont}" FontSize="12" Foreground="Red" VerticalAlignment="Center"/>
+                                    <TextBlock Text="streams" FontFamily="{StaticResource MingLiUFont}" FontSize="14" FontWeight="Bold" Foreground="#555555"/>
+                                </StackPanel>
+                                <StackPanel x:Name="VoiceHRAvatars" Orientation="Horizontal" Margin="10,5,0,0"/>
+                            </StackPanel>
+                        </Border>
+
+                        <Border Padding="10,5" Background="Transparent" BorderThickness="0,0,0,1" BorderBrush="#22FFFFFF">
+                            <StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="[LOCKED] " FontFamily="{StaticResource GameFont}" FontSize="12" Foreground="Red" VerticalAlignment="Center"/>
+                                    <TextBlock Text="Talk" FontFamily="{StaticResource MingLiUFont}" FontSize="14" FontWeight="Bold" Foreground="#555555"/>
+                                </StackPanel>
+                                <StackPanel x:Name="VoiceDivineAvatars" Orientation="Horizontal" Margin="10,5,0,0"/>
+                            </StackPanel>
+                        </Border>
+
+                    </StackPanel>
+                </ScrollViewer>
+            </Grid>
+        </Border>
+
+        <Grid Grid.Column="1" Background="Black">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="70"/>
+            </Grid.RowDefinitions>
+
+            <Border Grid.Row="0" Background="Black" BorderBrush="#01D800" BorderThickness="0,0,0,2">
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="15,0,0,0">
+                    <TextBlock x:Name="CurrentChannelText" Text="#general" FontFamily="{StaticResource MingLiUFont}" FontSize="20" FontWeight="Bold" Foreground="#01D800"/>
+                </StackPanel>
+            </Border>
+
+            <ScrollViewer x:Name="MessagesScroll" Grid.Row="1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+                <ScrollViewer.Resources>
+                    <Style TargetType="ScrollBar" BasedOn="{StaticResource CrueltyScrollBar}"/>
+                </ScrollViewer.Resources>
+                <StackPanel x:Name="MessagesPanel" Margin="15"/>
+            </ScrollViewer>
+
+            <Border x:Name="InputPanel" Grid.Row="2" Background="Black" BorderBrush="Red" BorderThickness="0,2,0,0" Margin="0">
+                <Grid>
+                    <TextBlock x:Name="InputText" Text="[ INPUT DISABLED ]" FontFamily="{StaticResource GameFont}" FontSize="10" FontWeight="Bold" Foreground="#FFAA00" VerticalAlignment="Center" Margin="15,0,0,0"/>
+
+                    <Button x:Name="CallCEOButton" 
+                            Content="[ CALL CEO ]" 
+                            Visibility="Collapsed"
+                            HorizontalAlignment="Right"
+                            Margin="0,10,15,10"
+                            FontFamily="{StaticResource MingLiUFont}"
+                            FontSize="18"
+                            FontWeight="Bold"
+                            Foreground="Red"
+                            Background="Black"
+                            BorderBrush="Red"
+                            BorderThickness="2"
+                            Padding="10,5"
+                            Cursor="None"
+                            Click="CallCEOButton_Click"/>
+                </Grid>
+            </Border>
+        </Grid>
+    </Grid>
+</UserControl>

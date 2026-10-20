@@ -1,0 +1,52 @@
+﻿<UserControl x:Class="A_corporate_bureaucratic_application_for_optimizing_managers_and_their_professional_activities.Views.ContractView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid>
+        <Image Source="/Assets/ContractIcon.png"
+               Stretch="Fill"
+               HorizontalAlignment="Stretch"
+               VerticalAlignment="Stretch"
+               IsHitTestVisible="False"/>
+
+        <TextBlock x:Name="TitleText"
+                   Text="THE ACT OF INDEFINITE PRIVATIZATION OF THE FACILITY"
+                   FontFamily="{StaticResource MingLiUFont}"
+                   FontSize="21"
+                   Foreground="Red"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Top"
+                   Margin="10,0,0,0"/>
+
+        <Rectangle Height="1"
+                   Fill="Red"
+                   HorizontalAlignment="Stretch"
+                   VerticalAlignment="Top"
+                   Margin="0,33,0,0"/>
+
+        <ScrollViewer x:Name="ContractScroll"
+                      VerticalScrollBarVisibility="Auto"
+                      HorizontalScrollBarVisibility="Disabled"
+                      HorizontalAlignment="Stretch"
+                      VerticalAlignment="Stretch"
+                      Margin="20,45,20,20">
+            <ScrollViewer.Resources>
+                <Style TargetType="ScrollBar" BasedOn="{StaticResource CrueltyScrollBar}"/>
+            </ScrollViewer.Resources>
+
+            <TextBox x:Name="ContractTextBox"
+                     FontFamily="{StaticResource MingLiUFont}"
+                     FontSize="16"
+                     Foreground="#01D800"
+                     Background="Transparent"
+                     BorderThickness="0"
+                     TextWrapping="Wrap"
+                     AcceptsReturn="True"
+                     IsReadOnly="True"
+                     IsReadOnlyCaretVisible="False"
+                     Focusable="False"
+                     IsHitTestVisible="False"
+                     VerticalScrollBarVisibility="Disabled"
+                     Padding="0"/>
+        </ScrollViewer>
+    </Grid>
+</UserControl>

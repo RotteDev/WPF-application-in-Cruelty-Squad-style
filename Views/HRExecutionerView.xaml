@@ -1,0 +1,135 @@
+﻿<UserControl x:Class="A_corporate_bureaucratic_application_for_optimizing_managers_and_their_professional_activities.Views.HRExecutionerView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <UserControl.Resources>
+        <Style x:Key="HRTextBoxStyle" TargetType="TextBox">
+            <Setter Property="FontFamily" Value="{StaticResource MingLiUFont}"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Foreground" Value="#01D800"/>
+            <Setter Property="Background" Value="Black"/>
+            <Setter Property="BorderBrush" Value="Red"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Padding" Value="4"/>
+            <Setter Property="Cursor" Value="None"/>
+            <Setter Property="CharacterCasing" Value="Upper"/>
+        </Style>
+    </UserControl.Resources>
+
+    <Grid Background="#4000FF00">
+        <TextBlock x:Name="TitleText"
+                   Text="HR EXECUTIONER"
+                   FontFamily="{StaticResource MingLiUFont}"
+                   FontSize="25"
+                   Foreground="Red"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Top"
+                   Margin="10,0,0,0"/>
+
+        <Rectangle Height="1"
+                   Fill="Red"
+                   HorizontalAlignment="Stretch"
+                   VerticalAlignment="Top"
+                   Margin="0,33,0,0"/>
+
+        <TextBlock x:Name="CpuLoadText"
+                   FontFamily="{StaticResource MingLiUFont}"
+                   FontSize="15"
+                   Foreground="Red"
+                   HorizontalAlignment="Right"
+                   VerticalAlignment="Top"
+                   Margin="0,0,35,0"
+                   Text="CPU: 0%"/>
+
+        <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Margin="10,38,0,0">
+            <TextBox x:Name="SearchIdBox"
+                     Style="{StaticResource HRTextBoxStyle}"
+                     Width="280"
+                     PreviewTextInput="SearchIdBox_PreviewTextInput"/>
+            <Button x:Name="SearchButton"
+                    Content="SEARCH"
+                    FontFamily="{StaticResource MingLiUFont}"
+                    FontSize="11"
+                    Foreground="Red"
+                    Background="Black"
+                    BorderBrush="Red"
+                    BorderThickness="1"
+                    Padding="5,2"
+                    Margin="5,0,0,0"
+                    Cursor="None"
+                    Click="SearchButton_Click"/>
+            <Button x:Name="ClearSearchButton"
+                    Content="CLEAR"
+                    FontFamily="{StaticResource MingLiUFont}"
+                    FontSize="11"
+                    Foreground="Red"
+                    Background="Black"
+                    BorderBrush="Red"
+                    BorderThickness="1"
+                    Padding="5,2"
+                    Margin="5,0,0,0"
+                    Cursor="None"
+                    Click="ClearSearchButton_Click"/>
+            <Button x:Name="RefreshButton"
+                    Content="REFRESH"
+                    FontFamily="{StaticResource MingLiUFont}"
+                    FontSize="11"
+                    Foreground="Red"
+                    Background="Black"
+                    BorderBrush="Red"
+                    BorderThickness="1"
+                    Padding="5,2"
+                    Margin="5,0,0,0"
+                    Cursor="None"
+                    Click="RefreshButton_Click"/>
+        </StackPanel>
+
+        <Grid HorizontalAlignment="Stretch"
+              VerticalAlignment="Top"
+              Margin="10,70,10,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="90"/>
+                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="80"/>
+                <ColumnDefinition Width="90"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Grid.Column="0" Text="NAME"
+                       FontFamily="{StaticResource MingLiUFont}"
+                       FontSize="12" FontWeight="Bold" Foreground="Black"/>
+
+            <TextBlock Grid.Column="1" Text="FLESH"
+                       FontFamily="{StaticResource MingLiUFont}"
+                       FontSize="12" FontWeight="Bold" Foreground="Black"/>
+
+            <TextBlock Grid.Column="2" Text="LOYALTY"
+                       FontFamily="{StaticResource MingLiUFont}"
+                       FontSize="12" FontWeight="Bold" Foreground="Black"/>
+
+            <TextBlock Grid.Column="3" Text="EFFECTIVENESS"
+                       FontFamily="{StaticResource MingLiUFont}"
+                       FontSize="12" FontWeight="Bold" Foreground="Black"/>
+        </Grid>
+
+        <Rectangle Height="1"
+                   Fill="Black"
+                   HorizontalAlignment="Stretch"
+                   VerticalAlignment="Top"
+                   Margin="10,88,10,0"/>
+
+        <ScrollViewer VerticalScrollBarVisibility="Auto"
+                      HorizontalScrollBarVisibility="Disabled"
+                      HorizontalAlignment="Stretch"
+                      VerticalAlignment="Stretch"
+                      Margin="10,93,10,10">
+            <ScrollViewer.Resources>
+                <Style TargetType="ScrollBar" BasedOn="{StaticResource CrueltyScrollBar}"/>
+            </ScrollViewer.Resources>
+
+            <StackPanel x:Name="EmployeesPanel"/>
+        </ScrollViewer>
+    </Grid>
+</UserControl>

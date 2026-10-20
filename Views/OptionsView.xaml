@@ -1,0 +1,148 @@
+﻿<UserControl x:Class="A_corporate_bureaucratic_application_for_optimizing_managers_and_their_professional_activities.Views.OptionsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <UserControl.Resources>
+        <Style x:Key="CrueltySliderRepeatButton" TargetType="RepeatButton">
+            <Setter Property="Focusable" Value="False"/>
+            <Setter Property="IsTabStop" Value="False"/>
+            <Setter Property="Cursor" Value="None"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="RepeatButton">
+                        <Border Background="Black"
+                                BorderBrush="Red"
+                                BorderThickness="1"
+                                Height="10"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="CrueltySliderThumb" TargetType="Thumb">
+            <Setter Property="Width" Value="12"/>
+            <Setter Property="Height" Value="20"/>
+            <Setter Property="Cursor" Value="None"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Thumb">
+                        <Border Background="#01D800"
+                                BorderBrush="Red"
+                                BorderThickness="1"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="CrueltySlider" TargetType="Slider">
+            <Setter Property="Focusable" Value="False"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Slider">
+                        <Grid VerticalAlignment="Center">
+                            <Track x:Name="PART_Track">
+                                <Track.DecreaseRepeatButton>
+                                    <RepeatButton Style="{StaticResource CrueltySliderRepeatButton}"
+                                                  Command="Slider.DecreaseLarge"/>
+                                </Track.DecreaseRepeatButton>
+                                <Track.Thumb>
+                                    <Thumb Style="{StaticResource CrueltySliderThumb}"/>
+                                </Track.Thumb>
+                                <Track.IncreaseRepeatButton>
+                                    <RepeatButton Style="{StaticResource CrueltySliderRepeatButton}"
+                                                  Command="Slider.IncreaseLarge"/>
+                                </Track.IncreaseRepeatButton>
+                            </Track>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Cursor" Value="None"/>
+        </Style>
+    </UserControl.Resources>
+
+    <Grid>
+        <Image Source="/Assets/OptionsBackgroundIcon.png"
+               Stretch="Fill"
+               IsHitTestVisible="False"/>
+
+        <TextBlock x:Name="MoneyText"
+                   Text="$ BLOCKED"
+                   FontFamily="{StaticResource GameFont}"
+                   FontSize="18"
+                   Foreground="Red"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Top"
+                   Margin="5,40,0,0"/>
+
+        <TextBlock x:Name="TitleText"
+                   Text="CALIBRATION OF THE SENSES"
+                   FontFamily="{StaticResource MingLiUFont}"
+                   FontSize="25"
+                   Foreground="Red"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Top"
+                   Margin="10,0,0,0"/>
+
+        <Rectangle Height="1"
+                   Fill="Red"
+                   HorizontalAlignment="Stretch"
+                   VerticalAlignment="Top"
+                   Margin="0,33,0,0"/>
+
+        <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Top"
+                    Margin="0,100,0,0">
+            <Image Source="/Assets/MTIcon.png"
+                   Width="60" Height="60"
+                   Margin="0,-80,0,-170"
+                   Stretch="Fill"/>
+        </StackPanel>
+
+        <Image Source="/Assets/SuitIcon.png"
+               Width="55" Height="55"
+               Margin="0,0,0,240"
+               Stretch="Fill"/>
+
+        <StackPanel HorizontalAlignment="Center"
+                    VerticalAlignment="Bottom"
+                    Margin="0,0,0,40"
+                    Width="500">
+
+            <TextBlock Text="MUSIC VOLUME"
+                       FontFamily="{StaticResource MingLiUFont}"
+                       FontSize="16"
+                       Foreground="Red"
+                       HorizontalAlignment="Left"
+                       Margin="4.5,0,0,5"/>
+
+            <Slider x:Name="VolumeSlider"
+                    Style="{StaticResource CrueltySlider}"
+                    Minimum="0"
+                    Maximum="1"
+                    SmallChange="0.01"
+                    LargeChange="0.1"
+                    TickFrequency="0.1"
+                    IsSnapToTickEnabled="False"
+                    ValueChanged="VolumeSlider_ValueChanged"
+                    Margin="0,0,0,15"/>
+
+            <TextBlock Text="SOUND VOLUME"
+                       FontFamily="{StaticResource MingLiUFont}"
+                       FontSize="16"
+                       Foreground="Red"
+                       HorizontalAlignment="Left"
+                       Margin="4.5,0,0,5"/>
+
+            <Slider x:Name="SoundSlider"
+                    Style="{StaticResource CrueltySlider}"
+                    Minimum="0"
+                    Maximum="1"
+                    SmallChange="0.01"
+                    LargeChange="0.1"
+                    TickFrequency="0.1"
+                    IsSnapToTickEnabled="False"
+                    ValueChanged="SoundSlider_ValueChanged"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

@@ -1,0 +1,169 @@
+﻿<UserControl x:Class="A_corporate_bureaucratic_application_for_optimizing_managers_and_their_professional_activities.Views.DebugView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <UserControl.Resources>
+        <Style x:Key="DebugButtonStyle" TargetType="Button">
+            <Setter Property="FontFamily" Value="{StaticResource MingLiUFont}"/>
+            <Setter Property="FontSize" Value="11"/>
+            <Setter Property="Foreground" Value="Red"/>
+            <Setter Property="Background" Value="Black"/>
+            <Setter Property="BorderBrush" Value="Red"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Padding" Value="6,3"/>
+            <Setter Property="Margin" Value="0,0,5,0"/>
+            <Setter Property="Cursor" Value="None"/>
+        </Style>
+    </UserControl.Resources>
+
+    <Grid Background="#400000FF">
+        <TextBlock x:Name="TitleText"
+                   Text="DEBUG TOOL"
+                   FontFamily="{StaticResource MingLiUFont}"
+                   FontSize="20"
+                   Foreground="Red"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Top"
+                   Margin="10,0,0,0"/>
+
+        <Rectangle Height="1"
+                   Fill="Red"
+                   HorizontalAlignment="Stretch"
+                   VerticalAlignment="Top"
+                   Margin="0,30,0,0"/>
+
+        <ScrollViewer VerticalScrollBarVisibility="Auto"
+                      HorizontalScrollBarVisibility="Disabled"
+                      HorizontalAlignment="Stretch"
+                      VerticalAlignment="Stretch"
+                      Margin="10,38,10,10">
+            <ScrollViewer.Resources>
+                <Style TargetType="ScrollBar" BasedOn="{StaticResource CrueltyScrollBar}"/>
+            </ScrollViewer.Resources>
+
+            <StackPanel Width="560">
+
+                <TextBlock Text="UI STATE"
+                           FontFamily="{StaticResource MingLiUFont}"
+                           FontSize="14"
+                           FontWeight="Bold"
+                           Foreground="Red"
+                           Margin="0,0,0,5"/>
+
+                <TextBlock x:Name="CurrentUIText"
+                           FontFamily="{StaticResource MingLiUFont}"
+                           FontSize="12"
+                           Foreground="Black"
+                           Margin="0,0,0,5"/>
+
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,15">
+                    <Button Content="UI 1" Style="{StaticResource DebugButtonStyle}" Click="SetUI1_Click"/>
+                    <Button Content="UI 2" Style="{StaticResource DebugButtonStyle}" Click="SetUI2_Click"/>
+                    <Button Content="UI 3" Style="{StaticResource DebugButtonStyle}" Click="SetUI3_Click"/>
+                </StackPanel>
+
+                <TextBlock Text="MENTAL TEST"
+                           FontFamily="{StaticResource MingLiUFont}"
+                           FontSize="14"
+                           FontWeight="Bold"
+                           Foreground="Red"
+                           Margin="0,0,0,5"/>
+
+                <TextBlock x:Name="MentalTestStatusText"
+                           FontFamily="{StaticResource MingLiUFont}"
+                           FontSize="12"
+                           Foreground="Black"
+                           Margin="0,0,0,5"/>
+
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,15">
+                    <Button Content="PASS TEST" Style="{StaticResource DebugButtonStyle}" Click="PassMentalTest_Click"/>
+                    <Button Content="FAIL TEST" Style="{StaticResource DebugButtonStyle}" Click="FailMentalTest_Click"/>
+                    <Button Content="RESET TEST" Style="{StaticResource DebugButtonStyle}" Click="ResetMentalTest_Click"/>
+                </StackPanel>
+
+                <TextBlock Text="REST PROTOCOL"
+                           FontFamily="{StaticResource MingLiUFont}"
+                           FontSize="14"
+                           FontWeight="Bold"
+                           Foreground="Red"
+                           Margin="0,0,0,5"/>
+
+                <TextBlock x:Name="RestStatusText"
+                           FontFamily="{StaticResource MingLiUFont}"
+                           FontSize="12"
+                           Foreground="Black"
+                           Margin="0,0,0,5"/>
+
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,15">
+                    <Button Content="RESET TIMER" Style="{StaticResource DebugButtonStyle}" Click="ResetRestTimer_Click"/>
+                    <Button Content="SET READY" Style="{StaticResource DebugButtonStyle}" Click="SetRestReady_Click"/>
+                    <Button Content="SET 8H" Style="{StaticResource DebugButtonStyle}" Click="SetRestCooldown_Click"/>
+                </StackPanel>
+
+                <TextBlock Text="BRAINWASH"
+                           FontFamily="{StaticResource MingLiUFont}"
+                           FontSize="14"
+                           FontWeight="Bold"
+                           Foreground="Red"
+                           Margin="0,0,0,5"/>
+
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,15">
+                    <Button Content="TOGGLE" Style="{StaticResource DebugButtonStyle}" Click="ToggleBrainWash_Click"/>
+                    <TextBlock x:Name="BrainWashStatusText"
+                               FontFamily="{StaticResource MingLiUFont}"
+                               FontSize="12"
+                               Foreground="Black"
+                               VerticalAlignment="Center"
+                               Margin="10,0,0,0"/>
+                </StackPanel>
+
+                <TextBlock Text="PLAYER"
+                           FontFamily="{StaticResource MingLiUFont}"
+                           FontSize="14"
+                           FontWeight="Bold"
+                           Foreground="Red"
+                           Margin="0,0,0,5"/>
+
+                <TextBlock x:Name="PlayerIDText"
+                           FontFamily="{StaticResource MingLiUFont}"
+                           FontSize="12"
+                           Foreground="Black"
+                           TextWrapping="Wrap"
+                           Margin="0,0,0,5"/>
+
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,15">
+                    <Button Content="KILL SELF" Style="{StaticResource DebugButtonStyle}" Click="KillSelf_Click"/>
+                    <Button Content="COPY ID" Style="{StaticResource DebugButtonStyle}" Click="CopyID_Click"/>
+                </StackPanel>
+
+                <TextBlock Text="SAVE DATA"
+                           FontFamily="{StaticResource MingLiUFont}"
+                           FontSize="14"
+                           FontWeight="Bold"
+                           Foreground="Red"
+                           Margin="0,0,0,5"/>
+
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,15">
+                    <Button Content="RESET ALL" Style="{StaticResource DebugButtonStyle}" Click="ResetAll_Click"/>
+                    <Button Content="RESET BIO" Style="{StaticResource DebugButtonStyle}" Click="ResetBio_Click"/>
+                    <Button Content="RESET SELF-KILL" Style="{StaticResource DebugButtonStyle}" Click="ResetSelfKill_Click"/>
+                </StackPanel>
+
+                <TextBlock Text="INFO"
+                           FontFamily="{StaticResource MingLiUFont}"
+                           FontSize="14"
+                           FontWeight="Bold"
+                           Foreground="Red"
+                           Margin="0,0,0,5"/>
+
+                <TextBlock x:Name="InfoText"
+                           FontFamily="{StaticResource MingLiUFont}"
+                           FontSize="12"
+                           Foreground="Black"
+                           TextWrapping="Wrap"
+                           Margin="0,0,0,10"/>
+
+                <Button Content="REFRESH INFO" Style="{StaticResource DebugButtonStyle}" Click="RefreshInfo_Click"/>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</UserControl>

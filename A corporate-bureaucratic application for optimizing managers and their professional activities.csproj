@@ -1,0 +1,412 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <RootNamespace>A_corporate_bureaucratic_application_for_optimizing_managers_and_their_professional_activities</RootNamespace>
+	  <AssemblyTitle>A CORPORATE-BUREAUCRATIC APPLICATION FOR OPTIMIZING MANAGERS AND THEIR PROFESSIONAL ACTIVITIES</AssemblyTitle>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+	  <ApplicationIcon>Assets\App.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Assets\App.ico" />
+    <None Remove="Assets\Avatar1.png" />
+    <None Remove="Assets\Avatar10.png" />
+    <None Remove="Assets\Avatar2.png" />
+    <None Remove="Assets\Avatar3.png" />
+    <None Remove="Assets\Avatar4.png" />
+    <None Remove="Assets\Avatar5.png" />
+    <None Remove="Assets\Avatar6.png" />
+    <None Remove="Assets\Avatar7.png" />
+    <None Remove="Assets\Avatar8.png" />
+    <None Remove="Assets\Avatar9.png" />
+    <None Remove="Assets\AvatarCEO.png" />
+    <None Remove="Assets\Background1.png" />
+    <None Remove="Assets\BioNoteBackground.png" />
+    <None Remove="Assets\BionoteBG.png" />
+    <None Remove="Assets\BionoteClearSound.mp3" />
+    <None Remove="Assets\BioNoteIcon.png" />
+    <None Remove="Assets\BionoteWriteSound1.mp3" />
+    <None Remove="Assets\BionoteWriteSound2.mp3" />
+    <None Remove="Assets\BrainWashIcon1.png" />
+    <None Remove="Assets\BrainWashIcon10.png" />
+    <None Remove="Assets\BrainWashIcon11.png" />
+    <None Remove="Assets\BrainWashIcon12.png" />
+    <None Remove="Assets\BrainWashIcon13.png" />
+    <None Remove="Assets\BrainWashIcon14.png" />
+    <None Remove="Assets\BrainWashIcon15.png" />
+    <None Remove="Assets\BrainWashIcon16.png" />
+    <None Remove="Assets\BrainWashIcon17.png" />
+    <None Remove="Assets\BrainWashIcon18.png" />
+    <None Remove="Assets\BrainWashIcon19.png" />
+    <None Remove="Assets\BrainWashIcon2.png" />
+    <None Remove="Assets\BrainWashIcon3.png" />
+    <None Remove="Assets\BrainWashIcon4.png" />
+    <None Remove="Assets\BrainWashIcon5.png" />
+    <None Remove="Assets\BrainWashIcon6.png" />
+    <None Remove="Assets\BrainWashIcon7.png" />
+    <None Remove="Assets\BrainWashIcon8.png" />
+    <None Remove="Assets\BrainWashIcon9.png" />
+    <None Remove="Assets\ButtonBackSound1.mp3" />
+    <None Remove="Assets\ButtonBackSound2.mp3" />
+    <None Remove="Assets\ButtonClearIcon.png" />
+    <None Remove="Assets\ButtonClickSound1.mp3" />
+    <None Remove="Assets\ButtonClickSound2.mp3" />
+    <None Remove="Assets\ButtonCloseSound.mp3" />
+    <None Remove="Assets\ButtonIcon.png" />
+    <None Remove="Assets\ButtonNextIcon.png" />
+    <None Remove="Assets\ButtonOpenSound.mp3" />
+    <None Remove="Assets\ButtonTestIcon.png" />
+    <None Remove="Assets\CalculatorBG.png" />
+    <None Remove="Assets\CEOBG.png" />
+    <None Remove="Assets\CEOIcon.png" />
+    <None Remove="Assets\CEOTalkIcon1.png" />
+    <None Remove="Assets\CEOTalkIcon2.png" />
+    <None Remove="Assets\CEOTalkIcon3.png" />
+    <None Remove="Assets\CEOTalkIcon4.png" />
+    <None Remove="Assets\CERTIFICATONFORTHEDIVINELIGHTINDEXIcon.png" />
+    <None Remove="Assets\ClosePanelIcon.png" />
+    <None Remove="Assets\Consumer Softproducts logo.jpg" />
+    <None Remove="Assets\ContactwiththeCEOIcon.png" />
+    <None Remove="Assets\ContractIcon.png" />
+    <None Remove="Assets\CorporateInsightIcon.png" />
+    <None Remove="Assets\Cursor1.png" />
+    <None Remove="Assets\Cursor2.png" />
+    <None Remove="Assets\Cursor3.png" />
+    <None Remove="Assets\cursor_default.png" />
+    <None Remove="Assets\cursor_hover1.png" />
+    <None Remove="Assets\cursor_hover2.png" />
+    <None Remove="Assets\cursor_hover3.png" />
+    <None Remove="Assets\DebugIcon.png" />
+    <None Remove="Assets\Depression_Nap.mp3" />
+    <None Remove="Assets\DivineTestAgree.mp3" />
+    <None Remove="Assets\DivineTestStart.mp3" />
+    <None Remove="Assets\DivineTestStartIcon.png" />
+    <None Remove="Assets\FatigueOptimizationProtocolIcon.png" />
+    <None Remove="Assets\FillerIcon1.png" />
+    <None Remove="Assets\FillerIcon2.png" />
+    <None Remove="Assets\FillerIcon3.png" />
+    <None Remove="Assets\FillerIcon4.png" />
+    <None Remove="Assets\gamefont.ttf" />
+    <None Remove="Assets\HRClearSound.mp3" />
+    <None Remove="Assets\HRExecutionerIcon.png" />
+    <None Remove="Assets\HRKillasset.mp3" />
+    <None Remove="Assets\HRSearchSound.mp3" />
+    <None Remove="Assets\InsightBG.png" />
+    <None Remove="Assets\InsightSound.mp3" />
+    <None Remove="Assets\MentalTestBGIcon.png" />
+    <None Remove="Assets\MentalTestIcon1.png" />
+    <None Remove="Assets\MentalTestIcon10.png" />
+    <None Remove="Assets\MentalTestIcon11.png" />
+    <None Remove="Assets\MentalTestIcon12.png" />
+    <None Remove="Assets\MentalTestIcon13.png" />
+    <None Remove="Assets\MentalTestIcon14.png" />
+    <None Remove="Assets\MentalTestIcon15.png" />
+    <None Remove="Assets\MentalTestIcon16.png" />
+    <None Remove="Assets\MentalTestIcon17.png" />
+    <None Remove="Assets\MentalTestIcon18.png" />
+    <None Remove="Assets\MentalTestIcon19.png" />
+    <None Remove="Assets\MentalTestIcon2.png" />
+    <None Remove="Assets\MentalTestIcon20.png" />
+    <None Remove="Assets\MentalTestIcon21.png" />
+    <None Remove="Assets\MentalTestIcon22.png" />
+    <None Remove="Assets\MentalTestIcon23.png" />
+    <None Remove="Assets\MentalTestIcon24.png" />
+    <None Remove="Assets\MentalTestIcon25.png" />
+    <None Remove="Assets\MentalTestIcon3.png" />
+    <None Remove="Assets\MentalTestIcon4.png" />
+    <None Remove="Assets\MentalTestIcon5.png" />
+    <None Remove="Assets\MentalTestIcon6.png" />
+    <None Remove="Assets\MentalTestIcon7.png" />
+    <None Remove="Assets\MentalTestIcon9.png" />
+    <None Remove="Assets\MentalTestSound.mp3" />
+    <None Remove="Assets\MTIcon.png" />
+    <None Remove="Assets\MyAvatar.png" />
+    <None Remove="Assets\OptionsBackgroundIcon.png" />
+    <None Remove="Assets\OptionsIcon.png" />
+    <None Remove="Assets\RealCEO.png" />
+    <None Remove="Assets\RestSound.mp3" />
+    <None Remove="Assets\SCREENINGOFMENTALASSETWEARIcon.png" />
+    <None Remove="Assets\Smile-1.png" />
+    <None Remove="Assets\Smile0.png" />
+    <None Remove="Assets\Smile1.png" />
+    <None Remove="Assets\Smile2.png" />
+    <None Remove="Assets\Smile3.png" />
+    <None Remove="Assets\SuitIcon.png" />
+    <None Remove="Assets\TheactofindefiniteprivatizationofthesubjectIcon.png" />
+    <None Remove="Assets\UI1.png" />
+    <None Remove="Assets\UI2.png" />
+    <None Remove="Assets\UI3.png" />
+    <None Remove="Assets\UroborosIcon.png" />
+    <None Remove="Assets\WarningGIf.gif" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Diagnostics.PerformanceCounter" Version="10.0.12" />
+    <PackageReference Include="WpfAnimatedGif" Version="2.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\App.ico">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Avatar1.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Avatar10.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Avatar2.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Avatar3.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Avatar4.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Avatar5.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Avatar6.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Avatar7.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Avatar8.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Avatar9.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\AvatarCEO.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Background1.png" />
+    <Resource Include="Assets\BioNoteBackground.png" />
+    <Resource Include="Assets\BionoteBG.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\BionoteClearSound.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\BioNoteIcon.png" />
+    <Resource Include="Assets\BionoteWriteSound1.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\BionoteWriteSound2.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\BrainWashIcon1.png" />
+    <Resource Include="Assets\BrainWashIcon10.png" />
+    <Resource Include="Assets\BrainWashIcon11.png" />
+    <Resource Include="Assets\BrainWashIcon12.png" />
+    <Resource Include="Assets\BrainWashIcon13.png" />
+    <Resource Include="Assets\BrainWashIcon14.png" />
+    <Resource Include="Assets\BrainWashIcon15.png" />
+    <Resource Include="Assets\BrainWashIcon16.png" />
+    <Resource Include="Assets\BrainWashIcon17.png" />
+    <Resource Include="Assets\BrainWashIcon18.png" />
+    <Resource Include="Assets\BrainWashIcon19.png" />
+    <Resource Include="Assets\BrainWashIcon2.png" />
+    <Resource Include="Assets\BrainWashIcon3.png" />
+    <Resource Include="Assets\BrainWashIcon4.png" />
+    <Resource Include="Assets\BrainWashIcon5.png" />
+    <Resource Include="Assets\BrainWashIcon6.png" />
+    <Resource Include="Assets\BrainWashIcon7.png" />
+    <Resource Include="Assets\BrainWashIcon8.png" />
+    <Resource Include="Assets\BrainWashIcon9.png" />
+    <Resource Include="Assets\ButtonBackSound1.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\ButtonBackSound2.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\ButtonClearIcon.png" />
+    <Resource Include="Assets\ButtonClickSound1.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\ButtonClickSound2.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\ButtonCloseSound.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\ButtonNextIcon.png" />
+    <Resource Include="Assets\ButtonOpenSound.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\ButtonTestIcon.png" />
+    <Resource Include="Assets\CalculatorBG.png" />
+    <Resource Include="Assets\CalculatorSound.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\CEOBG.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\CEOCallSound.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\CEOTalkIcon1.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\CEOTalkIcon2.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\CEOTalkIcon3.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\CEOTalkIcon4.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\CERTIFICATONFORTHEDIVINELIGHTINDEXIcon.png" />
+    <Resource Include="Assets\ClosePanelIcon.png" />
+    <Resource Include="Assets\ContactwiththeCEOIcon.png" />
+    <Resource Include="Assets\ContractIcon.png" />
+    <Resource Include="Assets\CorporateInsightIcon.png" />
+    <Resource Include="Assets\Cursor1.png" />
+    <Resource Include="Assets\Cursor2.png" />
+    <Resource Include="Assets\Cursor3.png" />
+    <Resource Include="Assets\DebtandDepravitycalculatorIcon.png" />
+    <Resource Include="Assets\Consumer Softproducts logo.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\DebugIcon.png" />
+    <Resource Include="Assets\Depression_Nap.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\DivineTestAgree.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\DivineTestStart.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\DivineTestStartIcon.png" />
+    <Resource Include="Assets\ExitIcon.png" />
+    <Resource Include="Assets\FatigueOptimizationProtocolIcon.png" />
+    <Resource Include="Assets\FillerIcon1.png" />
+    <Resource Include="Assets\FillerIcon2.png" />
+    <Resource Include="Assets\FillerIcon3.png" />
+    <Resource Include="Assets\FillerIcon4.png" />
+    <Resource Include="Assets\FillerIcon5.png" />
+    <Resource Include="Assets\gamefont.ttf" />
+    <Resource Include="Assets\HRClearSound.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\HRExecutionerIcon.png" />
+    <Resource Include="Assets\HRKillasset.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\HRSearchSound.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\InsightBG.png" />
+    <Resource Include="Assets\InsightSound.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\LoadingScreenSound.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\MentalTestBGIcon.png" />
+    <Resource Include="Assets\MentalTestIcon1.png" />
+    <Resource Include="Assets\MentalTestIcon10.png" />
+    <Resource Include="Assets\MentalTestIcon11.png" />
+    <Resource Include="Assets\MentalTestIcon12.png" />
+    <Resource Include="Assets\MentalTestIcon13.png" />
+    <Resource Include="Assets\MentalTestIcon14.png" />
+    <Resource Include="Assets\MentalTestIcon15.png" />
+    <Resource Include="Assets\MentalTestIcon16.png" />
+    <Resource Include="Assets\MentalTestIcon17.png" />
+    <Resource Include="Assets\MentalTestIcon18.png" />
+    <Resource Include="Assets\MentalTestIcon19.png" />
+    <Resource Include="Assets\MentalTestIcon2.png" />
+    <Resource Include="Assets\MentalTestIcon20.png" />
+    <Resource Include="Assets\MentalTestIcon21.png" />
+    <Resource Include="Assets\MentalTestIcon22.png" />
+    <Resource Include="Assets\MentalTestIcon23.png" />
+    <Resource Include="Assets\MentalTestIcon24.png" />
+    <Resource Include="Assets\MentalTestIcon25.png" />
+    <Resource Include="Assets\MentalTestIcon3.png" />
+    <Resource Include="Assets\MentalTestIcon4.png" />
+    <Resource Include="Assets\MentalTestIcon5.png" />
+    <Resource Include="Assets\MentalTestIcon6.png" />
+    <Resource Include="Assets\MentalTestIcon7.png" />
+    <Resource Include="Assets\MentalTestIcon8.png" />
+    <Resource Include="Assets\MentalTestIcon9.png" />
+    <Resource Include="Assets\MentalTestSound.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\MingLiU.ttf" />
+    <Resource Include="Assets\MTIcon.png" />
+    <Resource Include="Assets\MyAvatar.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\OptionsBackgroundIcon.png" />
+    <Resource Include="Assets\OptionsIcon.png" />
+    <Resource Include="Assets\RealCEO.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\RestSound.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\SCREENINGOFMENTALASSETWEARIcon.png" />
+    <Resource Include="Assets\Smile-1.png" />
+    <Resource Include="Assets\Smile0.png" />
+    <Resource Include="Assets\Smile1.png" />
+    <Resource Include="Assets\Smile2.png" />
+    <Resource Include="Assets\Smile3.png" />
+    <Resource Include="Assets\SuitIcon.png" />
+    <Resource Include="Assets\TheactofindefiniteprivatizationofthesubjectIcon.png" />
+    <Resource Include="Assets\UI1.png" />
+    <Resource Include="Assets\UI2.png" />
+    <Resource Include="Assets\UI3.png" />
+    <Resource Include="Assets\UroborosIcon.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\WarningGIf.gif">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+	<ItemGroup>
+		<Content Include="Assets\**\*.*">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Content Remove="Assets\Consumer Softproducts logo.jpg" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Include=".cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>.gitignore</DependentUpon>
+	  </None>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Update=".gitignore">
+	    <Generator>TextTemplatingFileGenerator</Generator>
+	    <LastGenOutput>.cs</LastGenOutput>
+	  </None>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Update=".cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>.gitignore</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+	
+</Project>
